@@ -29,45 +29,45 @@ public class P3 {
   sc.close();
 
   if (starting > ending || (ending - starting) % increment != 0) {
+
    System.out.println("Error input!");
-
-  } else {
-
-   System.out.println("US$     S$");
-   System.out.println("--------------");
-
-   System.out.println("FOR LOOP");
-   for (int i = starting; i <= ending; i += increment) {
-    double conv = i * rate;
-    System.out.printf("%d      %.3g\n", i, conv);
-   }
-   System.out.println();
-
-   System.out.println("WHILE LOOP");
-
-   int i = starting;
-
-   while (i <= ending) {
-    double conv = i * rate;
-    System.out.printf("%d      %.3g\n", i, conv);
-
-    i += increment;
-   }
-   System.out.println();
-
-   System.out.println("DO/WHILE LOOP");
-
-   int x = starting;
-
-   do {
-    double conv = x * rate;
-    System.out.printf("%d      %.3g\n", x, conv);
-
-    x += increment;
-   } while (x <= ending);
-   System.out.println();
-
+   System.exit(1);
   }
+
+  System.out.println("US$     S$");
+  System.out.println("--------------");
+
+  System.out.println("FOR LOOP");
+  for (int i = starting; i <= ending; i += increment) {
+   double conv = i * rate;
+   System.out.printf("%d      %.3g\n", i, conv);
+  }
+  System.out.println();
+
+  System.out.println("WHILE LOOP");
+
+  int i = starting;
+
+  while (i <= ending) {
+   double conv = i * rate;
+   System.out.printf("%d      %.3g\n", i, conv);
+
+   i += increment;
+  }
+  System.out.println();
+
+  System.out.println("DO/WHILE LOOP");
+
+  int x = starting;
+
+  do {
+   double conv = x * rate;
+   System.out.printf("%d      %.3g\n", x, conv);
+
+   x += increment;
+  } while (x <= ending);
+  System.out.println();
+
  }
 
 }
