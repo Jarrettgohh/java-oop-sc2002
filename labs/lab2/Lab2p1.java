@@ -38,8 +38,12 @@ public class Lab2p1 {
                     break;
 
                 case 4:
-                    countDigits();
+                    countDigits(-12);
+                    countDigits(123);
+                    countDigits(121456);
+                    System.out.println();
                     break;
+
                 case 5: /* add position() call */
                     break;
                 case 6: /* add extractOddDigits() call */
@@ -85,18 +89,19 @@ public class Lab2p1 {
 
     public static void divide(int m, int n) {
 
+        int x = m;
         int count = 0;
 
         do {
 
-            m -= n;
+            x -= n;
 
-            if (m >= 0)
+            if (x >= 0)
                 count++;
 
-        } while (m > 0);
+        } while (x > 0);
 
-        System.out.printf("Output: %d\n", count);
+        System.out.printf("%d/%d = %d\n", m, n, count);
 
     }
 
@@ -112,7 +117,7 @@ public class Lab2p1 {
 
     }
 
-    public static void countDigits() {
+    public static void countDigits(int n) {
 
     }
 
