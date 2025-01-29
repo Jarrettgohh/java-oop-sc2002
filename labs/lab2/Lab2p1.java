@@ -44,8 +44,13 @@ public class Lab2p1 {
                     System.out.println();
                     break;
 
-                case 5: /* add position() call */
+                case 5:
+                    position(12345, 3);
+                    position(123, 4);
+                    position(12145, 1);
+                    System.out.println();
                     break;
+
                 case 6: /* add extractOddDigits() call */
                     break;
                 case 7:
@@ -128,7 +133,7 @@ public class Lab2p1 {
 
             int count = 0;
 
-            for (int x = 0; x < 20; x++) {
+            for (;;) {
 
                 y /= 10;
 
@@ -144,6 +149,32 @@ public class Lab2p1 {
 
         System.out.printf("n: %d - %s\n", n, output);
 
+    }
+
+    public static void position(int n, int digit) {
+
+        int pos = 0;
+        int count = 1;
+
+        for (;;) {
+
+            if ((n % 10) == digit) {
+                pos = count;
+                break;
+            }
+
+            n /= 10;
+
+            if (n <= 0) {
+                pos = -1;
+                break;
+            }
+
+            count++;
+
+        }
+
+        System.out.printf("position: %d\n", pos);
     }
 
 }
