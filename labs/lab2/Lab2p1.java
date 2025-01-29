@@ -119,6 +119,31 @@ public class Lab2p1 {
 
     public static void countDigits(int n) {
 
+        String output = "";
+        int y = n;
+
+        if (n < 0) {
+            output = "Error input!";
+        } else {
+
+            int count = 0;
+
+            for (int x = 0; x < 20; x++) {
+
+                y /= 10;
+
+                count++;
+
+                if (y <= 0)
+                    break;
+            }
+
+            output = String.format("count = %d", count);
+
+        }
+
+        System.out.printf("n: %d - %s\n", n, output);
+
     }
 
 }
